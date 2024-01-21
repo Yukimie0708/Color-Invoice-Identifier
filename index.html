@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <script src="jscriptNaatuy.js" defer></script>
+
+
+    <title> | Color Recognition App</title>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Color Invoice Recognition App</h1>
+        <a href="home.html" class="home-link" onclick="redirectToHome()">Home</a>
+        <a href="about-us.html" class="about-link" onclick="redirectToAbout()">About us</a>
+    </header>
+    
+    <button id="startWebcam" class="start-link">Start Webcam</button>
+    <button id="stopWebcam" class="web-link"style="display:none;">Stop Webcam</button>
+    <button id="captureButton" class="capture-link" style="display:none;">Capture Colors</button>
+    <div id="colorNames">
+    </div>
+    
+    <video id="webcam" width="640" height="480" style="display:none;"></video>
+    <canvas id="canvas" style="display:none;"></canvas>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="webcam.js"></script>
+    
+
+    <!-- Your existing form -->
+    <form id="uploadForm" enctype="multipart/form-data">
+        
+        <!-- Display the original image with a border -->
+        <div id="originalImageContainer">
+            <input type="file" id="imageInput" accept="image/*" required onchange="updateOriginalImage()">
+            <h2>Original Image</h2>
+            <img id="originalImage" src="bg4.jpg" alt="Please insert an image" >
+        </div>
+        <div id="colorDisplay"></div>
+         <button type="button" onclick="processImage()" style="display: none;">Recognize Colors</button>
+        <button id="resetButton" type="button" onclick="resetApp()" style="display: none;">Reset</button>
+    </form>
+    
+    <!-- Add a "Cancel" button for speech synthesis -->
+    <button id="cancelSpeechButton" style="display: none;" onclick="cancelSpeech()">Cancel Speech</button>
+    <!-- Add a "Repeat Speech" button -->
+    <button id="repeatSpeechButton" style="display: none;" onclick="repeatSpeech()">Repeat Speech</button>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Color Recognition App. All rights reserved. </p>
+    </footer>
+    
+</body>
+
+</html>
