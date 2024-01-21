@@ -1,0 +1,21 @@
+php -S localhost:8000
+
+composer require league/color-extractor
+
+composer require league/color-extractor
+
+composer require league/color-extractor
+
+composer require league/color-extractor
+
+composer remove mossadal/color-namer
+composer require mossadal/color-namer
+
+{
+    "require": {
+        "mossadal/color-namer": "^1.0"
+    }
+}
+
+
+https://www.ginifab.com/feeds/pms/recognize_color_from_image.php
